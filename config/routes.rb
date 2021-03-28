@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   # namespace :api do
   #   get "/photos" => "photos#index"
   # end
+
+  namespace :api do
+    get "/places" => "places#index"
+    get "/places/:id" => "places#show"
+    post "/places" => "places#create"
+    patch "/places/:id" => "places#update"
+    delete "/places/:id" => "places#destroy"
+  end
 end
